@@ -5,60 +5,60 @@
 [![Rustfmt](https://github.com/AndreCanto00/Running_App_Rust/actions/workflows/rustfmt.yml/badge.svg)](https://github.com/AndreCanto00/Running_App_Rust/actions/workflows/rustfmt.yml)
 [![Tests](https://github.com/AndreCanto00/Running_App_Rust/actions/workflows/tests.yml/badge.svg)](https://github.com/AndreCanto00/Running_App_Rust/actions/workflows/tests.yml)
 
-## Descrizione
+## Description.
 
-Running_App_Rust è un'applicazione web scritta in Rust che calcola vari parametri di allenamento come TRIMP (Training Impulse), TRIMP_LT (Lactate Threshold Training Impulse) e HRRS (Heart Rate Recovery Score).
+Running_App_Rust is a web application written in Rust that calculates various training parameters such as TRIMP (Training Impulse), TRIMP_LT (Lactate Threshold Training Impulse) and HRRS (Heart Rate Recovery Score).
 
-## Installazione
+## Installation.
 
-1. Clona il repository:
-    ```sh
+1. Clone the repository:
+    ``sh
     git clone https://github.com/AndreCanto00/Running_App_Rust.git
     cd Running_App_Rust
     ```
 
-2. Costruisci il progetto:
-    ```sh
+2. Build the project:
+    ``sh
     cargo build
     ```
 
-3. Esegui i test:
+3. Run tests:
     ```sh
     cargo test
     ```
 
-## Uso
+## Usage
 
-Per avviare il server:
+To start the server:
 ```sh
 cargo run
 ```
 
-Il server sarà in esecuzione su `http://0.0.0.0:8080`.
+The server will be running at `http://0.0.0.0:8080`.
 
 ### Endpoint
 
-- `GET /`: Restituisce un messaggio di benvenuto.
-- `POST /trimp`: Calcola il valore TRIMP.
-- `POST /trimp_lt`: Calcola il valore TRIMP_LT.
-- `POST /hrrs`: Calcola il valore HRRS.
+- `GET /`: Returns a welcome message.
+- `POST /trimp`: Calculates the TRIMP value.
+- `POST /trimp_lt`: Calculates the TRIMP_LT value.
+- `POST /hrrs`: Calculates the HRRS value.
 
-### Esempio di richiesta
+### Example of a request.
 
-Per calcolare il valore TRIMP, invia una richiesta POST a `/trimp` con il seguente payload JSON:
-```json
+To calculate the TRIMP value, send a POST request to `/trimp` with the following JSON payload:
+``json
 {
-    "avg_hr": 140.0,
-    "max_hr": 190.0,
-    "rest_hr": 60.0,
-    "workout_duration": 60.0,
-    "lt_hr": 170.0
+    “avg_hr": 140.0,
+    “max_hr": 190.0,
+    “rest_hr": 60.0,
+    “workout_duration": 60.0,
+    “lt_hr": 170.0
 }
 ```
 
-## Comandi Makefile
+## Makefile commands
 
-- `make rust-version`: Mostra le versioni degli strumenti Rust installati.
+- `make rust-version`: Show the versions of the installed Rust tools.
 - `make format`: Format the code.
 - `make format-check`: Check code formatting.
 - `make lint`: Lint the code.
@@ -68,6 +68,7 @@ Per calcolare il valore TRIMP, invia una richiesta POST a `/trimp` con il seguen
 - `make build-release`: Build the release version.
 - `make all`: Format, lint, test, and run the application.
 
-## Licenza
 
-Questo progetto è distribuito sotto la licenza MIT. Vedi il file [LICENSE](./LICENSE) per maggiori dettagli.
+## License.
+
+This project is distributed under the MIT license. See the [LICENSE](./LICENSE) file for more details.
